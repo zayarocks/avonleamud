@@ -1,30 +1,10 @@
-inherit LIVING;
-inherit M_ACTIONS;
+inherit "/domains/avonlea/chars/villager";
 
-string *lines = ({
-   "say We asked Mrs. Spencer to bring us a boy.  A boy would be some use on the farm.",
-   "say To despair is to turn your back on God.",
-   "say There's the dinner to get and the cows to see to.",
-   "say I've no patience with all this romantic nonsense.",
-});
-
-void chatter()
+void on_receive(object ob)
 {
-   if (environment() && sizeof(users() & all_inventory(environment())))
-      do_game_command(lines[random(sizeof(lines))]);
-   call_out((: chatter :), 45 + random(60));
-}
-
-void check_brooch()
-{
-   object b = present("brooch", this_object());
-   if (b)
-   {
-      do_game_command("say Caught in my black lace shawl!  I'd never have thought to look there.");
-      do_game_command("say Thank you.  It was my mother's, and I'd sooner lose anything else I own.");
-      destruct(b);
-   }
-   call_out((: check_brooch :), 2);
+   do_game_command("say Caught in my black lace shawl!  I'd never have thought to look there.");
+   do_game_command("say Thank you.  It was my mother's, and I'd sooner lose anything else I own.");
+   destruct(ob);
 }
 
 void setup()
@@ -41,6 +21,12 @@ void setup()
             "something about her mouth which, if it had been ever so "
             "slightly developed, might have been considered indicative of "
             "a sense of humour.\n");
-   call_out((: chatter :), 20);
-   call_out((: check_brooch :), 2);
+
+   set_chat_lines(({
+      "say We asked Mrs. Spencer to bring us a boy.  A boy would be some use on the farm.",
+      "say To despair is to turn your back on God.",
+      "say There's the dinner to get and the cows to see to.",
+      "say I've no patience with all this romantic nonsense.",
+   }));
+   set_accepts(({ "brooch" }));
 }
