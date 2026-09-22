@@ -13,7 +13,7 @@ void setup()
   set_id("bottle", "wine");
   set_adj("currant", "red");
   set_long("A bottle of a deep cheerful red, the very colour of "
-           "raspberry cordial.  Only the label tells them apart, and it "
-           "is faded nearly to nothing.  Something in the smell of it is "
-           "not quite fruit.\n");
+			  "raspberry cordial.  Only the label tells them apart, and it "
+			  "is faded nearly to nothing.  Something in the smell of it is "
+			  "not quite fruit.\n");
 }
