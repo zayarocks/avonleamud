@@ -22,5 +22,6 @@ void setup()
       "say My life is a perfect graveyard of buried hopes.",
       "say If you call me Anne, please call me Anne spelled with an E.",
       "say Isn't it splendid to think of all the things there are to find out about?  It just makes me feel glad to be alive.",
+      "say Marilla says I may have Diana to tea, and give her the raspberry cordial.  It's down in the cellar.",
    }));
 }

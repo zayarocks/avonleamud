@@ -25,5 +25,5 @@ void setup()
 
    set_objects((["/domains/avonlea/chars/marilla":1]));
 
-   set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall"]));
+   set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall", "down":"cellar"]));
 }
