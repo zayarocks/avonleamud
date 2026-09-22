@@ -11,7 +11,9 @@ void setup()
             "tangle of vines, and through it you can glimpse the white "
             "cherry trees in the orchard and the slender birches nodding "
             "down in the hollow by the brook.  The table is laid for "
-            "supper.\n");
+            "supper.  A door leads north to the sitting room, the back "
+            "door opens west onto the yard, and a steep staircase goes up "
+            "to the gables.\n");
    set_light(1);
 
    add_item("table", "The table is laid with three plates, a dish of "
@@ -20,4 +22,6 @@ void setup()
    add_item("vines", "Vines cover the east window so thickly that the "
             "light comes through it green.  Beyond them the orchard is "
             "white with cherry blossom.\n");
+
+   set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall"]));
 }
