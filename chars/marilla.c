@@ -15,6 +15,18 @@ void chatter()
    call_out((: chatter :), 45 + random(60));
 }
 
+void check_brooch()
+{
+   object b = present("brooch", this_object());
+   if (b)
+   {
+      do_game_command("say Caught in my black lace shawl!  I'd never have thought to look there.");
+      do_game_command("say Thank you.  It was my mother's, and I'd sooner lose anything else I own.");
+      destruct(b);
+   }
+   call_out((: check_brooch :), 2);
+}
+
 void setup()
 {
    set_name("Marilla");
@@ -30,4 +42,5 @@ void setup()
             "slightly developed, might have been considered indicative of "
             "a sense of humour.\n");
    call_out((: chatter :), 20);
+   call_out((: check_brooch :), 2);
 }
