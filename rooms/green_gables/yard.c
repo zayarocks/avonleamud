@@ -13,5 +13,7 @@ void setup()
    add_item("willows", "Great patriarchal willows.\n");
    add_item("poplars", "A row of prim Lombardy poplars.\n");
 
+   set_objects((["/domains/avonlea/chars/matthew":1]));
+
    set_exits((["east":"kitchen"]));
 }
