@@ -2,7 +2,7 @@ inherit INDOOR_ROOM;
 
 void setup()
 {
-   set_brief("East gable room");
+   set_brief("Anne's room");
    set_long("The whitewashed walls of the east gable are so painfully and "
             "staringly bare that they seem to ache over their own bareness.  "
             "The floor is bare too, except for a round braided mat.  In one "
@@ -25,6 +25,8 @@ void setup()
    add_item("pincushion", "A fat red velvet pincushion, hard enough to "
             "turn the point of the most adventurous pin.\n");
    add_item("mirror", "A little six-by-eight mirror.\n");
+
+   set_objects((["/domains/avonlea/chars/anne":1]));
 
    set_exits((["west":"upstairs_hall"]));
 }
