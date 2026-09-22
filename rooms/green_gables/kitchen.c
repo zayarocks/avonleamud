@@ -21,7 +21,9 @@ void setup()
             "expected, but not company of any great importance.\n");
    add_item("vines", "Vines cover the east window so thickly that the "
             "light comes through it green.  Beyond them the orchard is "
-            "white with cherry blossom.\n");
+	    "white with cherry blossom.\n");
+
+   set_objects((["/domains/avonlea/chars/marilla":1]));
 
    set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall"]));
 }
