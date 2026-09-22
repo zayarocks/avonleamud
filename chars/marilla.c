@@ -2,9 +2,13 @@ inherit "/domains/avonlea/chars/villager";
 
 void on_receive(object ob)
 {
-   do_game_command("say Caught in my black lace shawl!  I'd never have thought to look there.");
-   do_game_command("say Thank you.  It was my mother's, and I'd sooner lose anything else I own.");
-   destruct(ob);
+  object giver = this_body();
+
+  do_game_command("say Caught in my black lace shawl!  I'd never have thought to look there.");
+  do_game_command("say Thank you.  It was my mother's, and I'd sooner lose anything else I own.");
+  if (giver)
+    QUEST_D->grant_points(giver, "avonlea", "brooch", "returned", "begin");
+  destruct(ob);
 }
 
 void setup()

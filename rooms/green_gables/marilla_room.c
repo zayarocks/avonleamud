@@ -1,4 +1,13 @@
+/* Marilla's Room  */
+/* marilla_room.c */
+
 inherit INDOOR_ROOM;
+
+void enter_room(object who)
+{
+  if (userp(who))
+    QUEST_D->begin_quest(who, "avonlea", "brooch");
+}
 
 void setup()
 {
