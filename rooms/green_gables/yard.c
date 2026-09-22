@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 inherit OUTDOOR_ROOM;
 
 void setup()
@@ -13,7 +14,7 @@ void setup()
 	add_item("willows", "Great patriarchal willows.\n");
 	add_item("poplars", "A row of prim Lombardy poplars.\n");
 
-	set_objects((["/domains/avonlea/chars/matthew":1]));
+	set_objects(([CHARS "matthew":1]));
 
-  set_exits((["north":"barn", "east":"kitchen", "west":"/domains/avonlea/rooms/roads/lovers_lane"]));
+  set_exits((["north":"barn", "east":"kitchen", "west":ROADS "lovers_lane"]));
 }

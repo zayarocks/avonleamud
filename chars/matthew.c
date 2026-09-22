@@ -1,6 +1,7 @@
+#include "/domains/avonlea/path.h"
 /* Matthew Cuthbert. */
 
-inherit "/domains/avonlea/chars/villager";
+inherit CHARS "villager";
 
 void setup()
 {

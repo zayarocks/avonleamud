@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* rooms/roads/lovers_lane.c
  *
  * Lover's Lane, the path down from behind the Green Gables orchard
@@ -24,7 +25,7 @@ void setup()
 		"any wind.\n");
 
 	set_exits(([
-		"north":"/domains/avonlea/rooms/green_gables/yard",
+		"north":GG "yard",
 		"south":"dryads_bubble",
 	]));
 }

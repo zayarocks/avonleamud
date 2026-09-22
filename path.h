@@ -1,11 +1,11 @@
-/*
- * Avonlea - path definitions.
- * Install this domain at /d/avonlea/ or change PATH below.
+/* path.h
+ *
+ * Path defines for the Avonlea domain.  Every cross-folder reference
+ * goes through these, so moving the domain means editing one line.
  */
-#define PATH   "/d/avonlea/"
-#define GG     PATH "green_gables/"
-#define ROADS  PATH "roads/"
-#define CHARS  PATH "chars/"
-#define ITEMS  PATH "items/"
 
-#define BROOCH_QUEST "Marilla's amethyst brooch"
+#define AVONLEA "/domains/avonlea/"
+#define GG      AVONLEA "rooms/green_gables/"
+#define ROADS   AVONLEA "rooms/roads/"
+#define CHARS   AVONLEA "chars/"
+#define ITEMS   AVONLEA "items/"

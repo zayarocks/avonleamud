@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* rooms/green_gables/sitting_room.c
  *
  * The Green Gables sitting room.  The closet in the corner holds
@@ -21,7 +22,7 @@ void setup()
   add_item("rug", "A round braided rug, made at home.\n");
   add_item("blinds", "The blinds are half drawn.\n");
 
-  set_objects((["/domains/avonlea/items/closet":1, "/domains/avonlea/chars/diana":1]));
+  set_objects(([ITEMS "closet":1, CHARS "diana":1]));
 
   set_exits((["south":"kitchen"]));
 }

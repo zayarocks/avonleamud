@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* rooms/green_gables/cellar.c
  *
  * The cellar under Green Gables, where Marilla keeps her preserves
@@ -21,6 +22,6 @@ void setup()
   add_item("apples", "A bin of winter apples, a little wrinkled now that "
 			  "June has come.\n");
 
-  set_objects((["/domains/avonlea/items/cordial":1]));
+  set_objects(([ITEMS "cordial":1]));
   set_exits((["up":"kitchen"]));
 }

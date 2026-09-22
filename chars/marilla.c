@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* chars/marilla.c
  *
  * Marilla Cuthbert, in the kitchen at Green Gables.  She accepts her
@@ -6,7 +7,7 @@
 
 #include <daemons.h>
 
-inherit "/domains/avonlea/chars/villager";
+inherit CHARS "villager";
 
 void on_receive(object ob)
 {

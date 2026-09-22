@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* The main road at Lynde's Hollow. */
 
 inherit OUTDOOR_ROOM;
@@ -21,6 +22,6 @@ void setup()
 	add_item("window", "Mrs. Lynde's kitchen window looks straight out on "
 				"the road.  Nothing passes it unnoticed.\n");
 
-	set_objects((["/domains/avonlea/chars/rachel":1]));
+	set_objects(([CHARS "rachel":1]));
 	set_exits((["north":"gg_lane"]));
 }

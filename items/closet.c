@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* items/closet.c
  *
  * The sitting-room closet.  The currant wine stands on the second
@@ -16,5 +17,5 @@ void setup()
 	set_attached();
 	set_long("The sitting-room closet.  The second shelf holds a bottle "
 		"of something a deep cheerful red.\n");
-	set_objects((["/domains/avonlea/items/currant_wine":1]));
+	set_objects(([ITEMS "currant_wine":1]));
 }

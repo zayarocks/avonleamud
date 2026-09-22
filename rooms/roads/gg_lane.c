@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* The lane from Green Gables to the main road. */
 
 inherit OUTDOOR_ROOM;
@@ -18,7 +19,7 @@ void setup()
 	add_item("roses", "Wild-rose bushes line both sides of the lane.\n");
 
 	set_exits(([
-		"north":"/domains/avonlea/rooms/green_gables/yard",
+		"north":GG "yard",
 		"south":"lyndes_hollow",
 	]));
 }

@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* chars/diana.c
  *
  * Diana Barry, Anne's bosom friend, come to tea at Green Gables.
@@ -7,7 +8,7 @@
 
 #include <daemons.h>
 
-inherit "/domains/avonlea/chars/villager";
+inherit CHARS "villager";
 
 void on_receive(object ob)
 {

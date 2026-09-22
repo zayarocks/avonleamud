@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 /* Marilla's Room  */
 /* marilla_room.c */
 
@@ -23,6 +24,6 @@ void setup()
 	add_item("shawl", "Marilla's black lace shawl, folded into the chest.  "
 				"The lace is fine and open, the sort that catches on things.\n");
 
-	set_objects((["/domains/avonlea/items/chest":1]));
+	set_objects(([ITEMS "chest":1]));
 	set_exits((["east":"upstairs_hall"]));
 }

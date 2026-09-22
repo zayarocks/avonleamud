@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 inherit INDOOR_ROOM;
 
 void setup()
@@ -23,7 +24,7 @@ void setup()
 				"light comes through it green.  Beyond them the orchard is "
 		 "white with cherry blossom.\n");
 
-	set_objects((["/domains/avonlea/chars/marilla":1]));
+	set_objects(([CHARS "marilla":1]));
 
 	set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall", "down":"cellar"]));
 }

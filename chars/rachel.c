@@ -1,6 +1,7 @@
+#include "/domains/avonlea/path.h"
 /* Mrs. Rachel Lynde. */
 
-inherit "/domains/avonlea/chars/villager";
+inherit CHARS "villager";
 
 void setup()
 {

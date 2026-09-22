@@ -1,4 +1,5 @@
-inherit "/domains/avonlea/chars/villager";
+#include "/domains/avonlea/path.h"
+inherit CHARS "villager";
 
 void setup()
 {

@@ -1,3 +1,4 @@
+#include "/domains/avonlea/path.h"
 inherit INDOOR_ROOM;
 
 void setup()
@@ -26,7 +27,7 @@ void setup()
 				"turn the point of the most adventurous pin.\n");
 	add_item("mirror", "A little six-by-eight mirror.\n");
 
-	set_objects((["/domains/avonlea/chars/anne":1]));
+	set_objects(([CHARS "anne":1]));
 
 	set_exits((["west":"upstairs_hall"]));
 }
