@@ -11,10 +11,9 @@ void setup()
 
    add_item("pincushion", "A pincushion on the bureau.  Something has "
             "been pinned in the middle of it before, but it is empty now.\n");
-   add_item("chest", "A wooden chest.  The lid is not quite shut, and a "
-            "fold of black lace hangs over the edge.\n");
    add_item("shawl", "Marilla's black lace shawl, folded into the chest.  "
-            "The lace is fine and open.\n");
+            "The lace is fine and open, the sort that catches on things.\n");
 
+   set_objects((["/domains/avonlea/items/chest":1]));
    set_exits((["east":"upstairs_hall"]));
 }

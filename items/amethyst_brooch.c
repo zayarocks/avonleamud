@@ -1,17 +1,13 @@
-/* Marilla's amethyst brooch.  Quest item. */
-#include "/d/avonlea/path.h"
-inherit "/std/object";
+inherit OBJ;
+inherit M_GETTABLE;
 
-void setup() {
-    set_name("brooch");
-    set_short("amethyst brooch");
-    add_adjective("amethyst");
-    set_long("An old-fashioned oval brooch containing a braid of fine "
-        "hair under glass, framed by a border of very fine amethysts.  "
-        "The stones glow a deep violet when the light touches them.  "
-        "This is certainly Marilla Cuthbert's most treasured possession, "
-        "and she would very much like to have it back.\n");
-    set_weight(1);
-    set_value(0);
-    add_property("avonlea brooch", 1);
+void setup()
+{
+   set_id("brooch");
+   set_adj("amethyst");
+   set_long("An old-fashioned oval brooch containing a braid of fine "
+            "hair, surrounded by a border of very fine amethysts.  The "
+            "stones glow a deep violet in the light.  A few threads of "
+            "black lace are still caught on its pin.\n");
+   set_getmsg("$N $vfree $o from the black lace of Marilla's shawl.\n");
 }
