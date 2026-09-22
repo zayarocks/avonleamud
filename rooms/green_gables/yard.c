@@ -15,5 +15,5 @@ void setup()
 
 	set_objects((["/domains/avonlea/chars/matthew":1]));
 
-	set_exits((["east":"kitchen"]));
+  set_exits((["north":"barn", "east":"kitchen", "west":"/domains/avonlea/rooms/roads/lovers_lane"]));
 }
