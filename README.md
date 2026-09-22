@@ -21,4 +21,4 @@ kill [PID]
 ```
 
 ## Quests
-See (QUESTS.md). 
+See [QUESTS.md]. 
