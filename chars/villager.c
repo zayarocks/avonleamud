@@ -52,5 +52,5 @@ mixed indirect_give_obj_to_liv(object ob, object liv)
 	foreach (string id in accepted_ids)
 		if (ob->id(id))
 			return 1;
-	return "#" + this_object()->the_short() + " has no use for that.\n";
+  return "#That is not wanted here.\n";
 }
