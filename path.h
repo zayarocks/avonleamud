@@ -9,3 +9,4 @@
 #define ROADS   AVONLEA "rooms/roads/"
 #define CHARS   AVONLEA "chars/"
 #define ITEMS   AVONLEA "items/"
+#define AVONLEA_OUTDOOR "/domains/avonlea/avonlea_outdoor"

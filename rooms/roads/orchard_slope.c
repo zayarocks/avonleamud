@@ -3,7 +3,7 @@
  * The Barry place, home of Diana, her mother, and small Minnie May.
  */
 
-inherit OUTDOOR_ROOM;
+inherit "/domains/avonlea/avonlea_outdoor";
 
 void setup()
 {
@@ -15,9 +15,8 @@ void setup()
 		"the white gable end of Green Gables on its hill.  The path "
 		"into the wood goes north.\n");
 	set_light(1);
-	set_weather(1);
-  set_weather(1);
-	add_item("house", "A grey-gabled farmhouse, kept as neatly as "
+	
+  add_item("house", "A grey-gabled farmhouse, kept as neatly as "
 		"Marilla keeps hers, and rather more comfortably.\n");
 	add_item("garden", "A trim garden of pinks and sweet-william, with "
 		"bee-hives along the fence.\n");

@@ -5,7 +5,7 @@
  * empty it again.
  */
 
-inherit OUTDOOR_ROOM;
+inherit "/domains/avonlea/avonlea_outdoor";
 
 void setup()
 {
@@ -20,9 +20,8 @@ void setup()
 		"fingers on your hand.  The log bridge is north; the path "
 		"goes on south.\n");
 	set_light(1);
-	set_weather(1);
-  set_weather(1);
-	add_item("spruces", "Old spruces, close-grown and dark, their lower "
+	
+  add_item("spruces", "Old spruces, close-grown and dark, their lower "
 		"branches long dead.\n");
 	add_item("needles", "The fallen needles lie deep enough to swallow "
 		"the sound of your own footsteps.\n");

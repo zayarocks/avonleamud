@@ -4,7 +4,7 @@
  * Anne named the spring the Dryad's Bubble.
  */
 
-inherit OUTDOOR_ROOM;
+inherit "/domains/avonlea/avonlea_outdoor";
 
 void setup()
 {
@@ -16,9 +16,8 @@ void setup()
 		"a thick grove of spruce.  The lane climbs back north toward "
 		"the orchard.\n");
 	set_light(1);
-	set_weather(1);
-	set_weather(1);
-	add_item("spring", "The water is so clear you can count the stones "
+	
+  add_item("spring", "The water is so clear you can count the stones "
 		"at the bottom, and so cold it aches to drink.\n");
 	add_item("bridge", "A single log laid across the brook, worn smooth "
 		"in the middle by many crossings.\n");

@@ -6,7 +6,7 @@
  * scope for imagination in it at all.
  */
 
-inherit OUTDOOR_ROOM;
+inherit AVONLEA + "avonlea_outdoor";
 
 void setup()
 {
@@ -18,9 +18,8 @@ void setup()
 		"yard lie back to the north; the path runs on downhill to the "
 		"south, toward the sound of running water.\n");
 	set_light(1);
-	set_weather(1);
-  set_weather(1);
-	add_item("ferns", "Ferns grow thick and waist-high on both sides of "
+	
+  add_item("ferns", "Ferns grow thick and waist-high on both sides of "
 		"the path.\n");
 	add_item("birches", "Slim white birches, young enough to bend in "
 		"any wind.\n");

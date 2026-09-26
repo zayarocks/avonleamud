@@ -1,7 +1,7 @@
 #include "/domains/avonlea/path.h"
 /* The lane from Green Gables to the main road. */
 
-inherit OUTDOOR_ROOM;
+inherit AVONLEA + "avonlea_outdoor";
 
 void setup()
 {
@@ -15,9 +15,8 @@ void setup()
 				"Avonlea houses are so sociably situated.  South, the lane meets "
 				"the road where it dips into Lynde's Hollow.\n");
 	set_light(1);
-	set_weather(1);
-  set_weather(1);
-	add_item("roses", "Wild-rose bushes line both sides of the lane.\n");
+	
+  add_item("roses", "Wild-rose bushes line both sides of the lane.\n");
 
 	set_exits(([
 		"north":GG "yard",
