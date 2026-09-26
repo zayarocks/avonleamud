@@ -1,20 +1,74 @@
 /* farm_room.c
  *
- * One room of a player's farmhouse.  farms.c creates it with the
- * remainder of the path as a single string, "<owner>/<room>", which
- * create() parses.  Every changeable detail comes from farm_d, so
- * decorating a room means storing a new value there, not editing
- * this file.
+ * One room of a player's farmhouse, created by farms.c with
+ * "<owner>/<room>" as a single string argument.
+ *
+ * Decor comes from farm_d, keyed to owner and room.  Contents are
+ * persisted with M_SAVE: the room's inventory is written to
+ * /data/avonlea/farms when the last body leaves and restored when
+ * the first arrives.  Players are excluded from the save.  Reads
+ * and writes are unguarded, as /data is outside the domain.
  */
 
 inherit INDOOR_ROOM;
+inherit M_SAVE;
+inherit M_ACCESS;
+
+#define SAVE_DIR "/data/avonlea/farms/"
 
 string owner_name;
 string room_name;
 
+nosave int restored;
+nosave int dirty;
+
 private string decor(string slot)
 {
 	return (string)(__DIR__ + "farm_d")->query_decor(owner_name, room_name, slot);
+}
+
+private string save_file()
+{
+	if (!owner_name || !room_name)
+		return 0;
+	return SAVE_DIR + owner_name + "_" + room_name + ".o";
+}
+
+private void restore_contents()
+{
+	string data;
+
+	if (restored || !save_file())
+		return;
+	restored = 1;
+
+	if (file_size(save_file()) <= 0)
+		return;
+	data = unguarded(1, (: read_file, save_file() :));
+	if (data && strlen(data))
+		load_from_string(data, 1);
+}
+
+private void save_contents()
+{
+	if (!save_file() || !dirty)
+		return;
+	unguarded(1, (: write_file, save_file(), save_things_to_string(1), 1 :));
+	dirty = 0;
+}
+
+void object_arrived(object ob)
+{
+	if (!restored)
+		restore_contents();
+	if (ob && ob->is_body())
+		dirty = 1;
+}
+
+void object_left(object ob)
+{
+	if (!sizeof(filter(all_inventory(), (: $1->is_body() :))))
+		save_contents();
 }
 
 void create(string arg)
@@ -25,6 +79,7 @@ void create(string arg)
 		return;
 	}
 	sscanf(arg, "%s/%s", owner_name, room_name);
+	add_save(({ "owner_name", "room_name" }));
 	::create();
 }
 
@@ -37,6 +92,9 @@ void setup()
 
 	if (!owner_name || !room_name)
 		return;
+
+	add_hook("object_arrived", (: object_arrived :));
+	add_hook("object_left", (: object_left :));
 
 	base = __DIR__ + "farms/" + owner_name + "/";
 	paper = decor("paper");
@@ -83,8 +141,7 @@ void setup()
 			"and the mantelshelf is crowded with ornaments.  A sampler "
 			"and a motto hang on either side of the door, and an "
 			"aspidistra stands by the window.  The hall is west.\n");
-		add_item("paper", "The field between the rails is " + paper +
-			".\n");
+		add_item("paper", "The field between the rails is " + paper + ".\n");
 		add_item("rug", "The floor is covered with " + carpet + ".\n");
 		add_item("curtains", "The curtains are " + curtains + ".\n");
 		add_item("mantel", "Among the ornaments is " + ornament + ".\n");
