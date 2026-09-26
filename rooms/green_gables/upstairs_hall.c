@@ -10,5 +10,10 @@ void setup()
 	
 	set_light(1);
 
-	set_exits((["east":"east_gable", "west":"marilla_room", "down":"kitchen"]));
+  set_exits(([
+	  "east" : "east_gable",
+	  "west" : "marilla_room",
+	  "north" : "spare_room",
+	  "down" : "kitchen",
+  ]));
 }

@@ -24,5 +24,5 @@ void setup()
 
   set_objects(([ITEMS "closet":1, CHARS "diana":1]));
 
-  set_exits((["south":"kitchen"]));
+  set_exits((["south" : "kitchen", "west" : "front_hall"]));
 }

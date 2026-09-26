@@ -17,5 +17,5 @@ void setup()
 
 	set_objects(([CHARS "matthew":1]));
 
-  set_exits((["north":"barn", "east":"kitchen", "west":ROADS "lovers_lane"]));
+  set_exits((["north":"barn", "east":"back_porch", "west":ROADS "lovers_lane"]));
 }

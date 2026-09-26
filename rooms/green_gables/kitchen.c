@@ -26,5 +26,11 @@ void setup()
 
 	set_objects(([CHARS "marilla":1]));
 
-	set_exits((["west":"yard", "north":"sitting_room", "up":"upstairs_hall", "down":"cellar"]));
-}
+  set_exits(([
+	  "west" : "back_porch",
+	  "north" : "sitting_room",
+	  "south" : "pantry",
+	  "east" : "matthew_room",
+	  "up" : "upstairs_hall",
+	  "down" : "cellar",
+  ]));}
