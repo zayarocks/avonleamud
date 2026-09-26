@@ -23,5 +23,5 @@ void setup()
 				"the road.  Nothing passes it unnoticed.\n");
 
 	set_objects(([CHARS "rachel":1]));
-	set_exits((["north":"gg_lane"]));
+  set_exits((["north" : "gg_lane", "east" : "main_road_1"]));
 }

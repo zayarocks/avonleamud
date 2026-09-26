@@ -1,5 +1,5 @@
 #include "/domains/avonlea/path.h"
-inherit OUTDOOR_ROOM;
+inherit AVONLEA_OUTDOOR;
 
 void setup()
 {
