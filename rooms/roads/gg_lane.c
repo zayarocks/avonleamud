@@ -15,7 +15,8 @@ void setup()
 				"Avonlea houses are so sociably situated.  South, the lane meets "
 				"the road where it dips into Lynde's Hollow.\n");
 	set_light(1);
-
+	set_weather(1);
+  set_weather(1);
 	add_item("roses", "Wild-rose bushes line both sides of the lane.\n");
 
 	set_exits(([

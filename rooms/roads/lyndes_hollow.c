@@ -17,7 +17,8 @@ void setup()
 				"road, and from her kitchen window she can see everything that "
 				"passes.  The lane to Green Gables goes north.\n");
 	set_light(1);
-  
+	set_weather(1);
+  set_weather(1);  
 	add_item("brook", "A quiet, well-conducted little brook.\n");
 	add_item("window", "Mrs. Lynde's kitchen window looks straight out on "
 				"the road.  Nothing passes it unnoticed.\n");

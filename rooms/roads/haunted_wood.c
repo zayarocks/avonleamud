@@ -20,7 +20,8 @@ void setup()
 		"fingers on your hand.  The log bridge is north; the path "
 		"goes on south.\n");
 	set_light(1);
-
+	set_weather(1);
+  set_weather(1);
 	add_item("spruces", "Old spruces, close-grown and dark, their lower "
 		"branches long dead.\n");
 	add_item("needles", "The fallen needles lie deep enough to swallow "

@@ -17,7 +17,8 @@ void setup()
 		"cup-handle, a saucer with gilt round the rim.  The wood lies "
 		"north, and Orchard Slope is south.\n");
 	set_light(1);
-
+	set_weather(1);
+  set_weather(1);
 	add_item("birches", "White birches, planted by nobody, grown in a "
 		"ring by pure good fortune.\n");
 	add_item("shelves", "Boards laid across the low branches, holding "
